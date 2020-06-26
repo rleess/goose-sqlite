@@ -98,8 +98,11 @@ func runMigrations(conf *DBConf, migrationsDir string, target int64, allowOutOfO
 			fmt.Println("Hitting fatal error")
 			log.Fatalf("FAIL %v, quitting migration", e)
 		}
+		fmt.Println("After migration error check")
 
+		fmt.Println("Before printing OK")
 		fmt.Println("OK   ", filepath.Base(m.Source))
+		fmt.Println("After printing OK")
 	}
 }
 
