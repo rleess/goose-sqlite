@@ -106,7 +106,8 @@ func runMigrations(conf *DBConf, migrationsDir string, target int64, allowOutOfO
 			fmt.Printf("Error printing: %s", err.Error())
 		}
 		fmt.Println("After printing OK")
-		fmt.Printf("Printf After printing OK: $s", "foo")
+		fmt.Printf("Printf After printing OK: %s", "foo")
+		fmt.Println("Last one")
 	}
 }
 
